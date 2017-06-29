@@ -33,7 +33,7 @@ public class HatController : MonoBehaviour {
 	// called once per physics timestamp
 	void FixedUpdate(){
 		Vector3 rawPosition = cam.ScreenToWorldPoint (Input.mousePosition);
-		Vector3 targetPosition = new Vector3 (rawPosition.x, 0f, 0f);
+		Vector3 targetPosition = new Vector3 (rawPosition.x, 0.4f, 0f);
 
 		targetPosition.x = Mathf.Clamp (targetPosition.x, -maxWidth, maxWidth);
 		rb2d.MovePosition (targetPosition);
